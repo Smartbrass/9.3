@@ -1,5 +1,6 @@
 a = input('Введите числа через пробел:')
-a1 = [int(_) for _ in a.split()]
+a1 = list(map(int, a.split()))
+#a1 = [int(_) for _ in a.split()]
 a2 = []
 for i in range(len(a1)):
     if a1[i] in a2:
@@ -7,4 +8,3 @@ for i in range(len(a1)):
     else:
         print(a1[i], '- NO')
         a2 += [a1[i]]
-      
